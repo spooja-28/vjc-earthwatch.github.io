@@ -1,0 +1,535 @@
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 5%;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+}
+
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: black;
+  list-style: none;
+  text-align: center;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  display: block;
+  font-size: 1.1vw;
+  color: white;
+  padding: 2.5vh 1vw;
+  text-decoration: none
+}
+
+.navbar li {
+  display: inline-flex;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown buttons */
+.dropdown .dropbtn {
+  font-size: 1.1vw;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 1vh 1vw;
+  background-color: inherit;
+  font-family: inherit;
+}
+
+/* Hover colour on navbar */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  color: #BFC0C0
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 2vw;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 2.5vh 1vw;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Background color for dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+  font-family: inherit;
+}
+
+/* Clickable image map */
+
+.selector {
+  margin: auto;
+  margin-top: 50px;
+  position: relative;
+  width: 70%;
+}
+
+/* Make the image responsive */
+.selector img {
+  width: 100%;
+  height: auto;
+}
+
+/* Style the button and place it in the middle of the container/image */
+.selector .btn-1 {
+  position: absolute;
+  top: 30%; 
+  left: 55%;
+  transform: translate(-50%, -50%); /* Change position */
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.selector .btn-2 {
+  position: absolute;
+  top: 30%; 
+  left: 75%;
+  transform: translate(-50%, -50%); /* Change position */
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.selector .btn-3 {
+  position: absolute;
+  top: 50%; 
+  left: 70%;
+  transform: translate(-50%, -50%); /* Change position */
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.selector .btn-4 {
+  position: absolute;
+  top: 70%; 
+  left: 65%;
+  transform: translate(-50%, -50%); /* Change position */
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.selector .btn-1:hover {
+  background-color: black;
+}
+
+.selector .btn-2:hover {
+  background-color: black;
+}
+
+.selector .btn-3:hover {
+  background-color: black;
+}
+
+.selector .btn-4:hover {
+  background-color: black;
+}
+
+/* Image container */
+.headerimage {
+  position: relative;
+  text-align: center;
+}
+
+.headerimage img {
+  opacity: 50%;
+}
+
+
+/* Heading container */
+.heading {
+  font-size: 10vw;
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-text-stroke: 0.3vw black;
+  word-spacing: 10px;
+}
+
+.heading-acknowledgements {
+  font-size: 8vw;
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-text-stroke: 0.3vw black;
+  word-spacing: 10px;
+}
+
+/* Search bar */
+.search__floater {
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  transition: all ease-in-out 0.2s;
+  transform: translate(-50%, -50%);
+}
+
+.search__anchor{
+  position: relative;
+  width:auto;
+  height: auto;
+}
+
+.search__submit {
+ opacity:0;
+  width: 0px;
+}
+
+.search__bar {
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  outline:none;
+  border:none;
+  background: #2d3142;
+  color: white;
+  width: 50px;
+  height:50px;
+  border-radius: 25px;
+  opacity: 0;
+  z-index:5;
+  transition: all 0.2;
+  font-size: 1em;
+}
+
+.search__bar:hover{
+  cursor: pointer;
+}
+
+.search__bar:focus {
+  width: 200px;
+  left:auto;
+  opacity: 1;
+  cursor: text;
+  transition: all 0.2;
+  padding-left: 25px;
+  padding-right: 70px;
+}
+
+.search__toggler {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #db5461;
+  opacity: 1;
+  top: -4px;
+  left: -4px;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.search__toggler:hover{
+  cursor: pointer;
+}
+
+.search__toggler::before {
+  content: "";
+  position: absolute;
+  margin: auto;
+  top: 22px;
+  right:0;
+  bottom:0;
+  left: 22px;
+  width: 12px;
+  height: 2px;
+  background: #fff;
+  transform: rotate(45deg);
+  transition: all 0.2s;
+}
+
+.search__toggler::after {
+  content: "";
+  position: absolute;
+  margin: auto;
+  top:-5px;
+  right:0;
+  bottom:0;
+  left: -5px;
+  width:25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  transition: all 0.2s;
+}
+
+.search__bar:focus ~ .search__toggler {
+  right: 400px;
+  background: #bfc0c0;
+  z-index: 6;
+  transition: all 0.2;
+}
+
+.search__bar:focus ~ .search__toggler::before{
+  top: 0;
+  left: 0;
+  width: 25px;
+}
+
+.search__bar:focus ~ .search__toggler::after {
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 2px;
+  border: none;
+  background: white;
+  border-radius: 0%;
+  transform: rotate(-45deg);
+}
+
+/* Text container */
+.container, .container-credits, .footer-container {
+  margin: auto;
+  width: 50%;
+}
+
+.container p {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 40px;
+  margin-bottom: 10px;
+}
+
+.container-credits h2 {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 20px;
+  line-height: 22px;
+}
+
+.container-credits p {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 20px;
+  line-height: 22px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* FOOTER */
+footer {
+  text-align: center;
+  background-color: black;
+  color: white;
+  display: inline;
+}
+
+footer p {
+  padding-top: 40px;
+  padding-bottom: 5px;
+  font-size: 25px;
+}
+
+footer .inlineimg {
+  font-size: 25px;
+	width: 5%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+footer img {
+  font-size: 25px;
+	width: 30%;
+	text-align: center;
+	line-height: 42px;
+	margin: 5px 15px;
+	vertical-align: middle;
+}
+
+footer a {
+  display: inline-block;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+}
+
+
+/* PLANTS */
+.galleryhead {
+  text-align: center;
+  font-size: 40px;
+}
+
+.plant-grid {
+  padding: 5vh 10vw;
+  text-align: center;
+  line-height: 70px;
+}
+
+.plant-information {
+  margin: 40px auto;
+  width: 80vmax;
+}
+
+.plant-name {
+  font-size: 30px;
+}
+
+.sci-name {
+  font-size: 25px;
+}
+
+.plant-name, .plant-description, .plant-icons {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.plant-description p {
+  line-height: 25px;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.plant-icons img {
+  margin: 5px;
+}
+
+.plant-menu-buttons {
+  margin-top: 10px;
+  align-content: right;
+}
+
+
+
+
+/* CSS RESET
+http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
